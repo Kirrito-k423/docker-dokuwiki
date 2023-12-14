@@ -7,8 +7,10 @@ ENV VERSION stable
 
 # Install necessary softwares
 RUN apt-get update \
-    && apt-get install -y wget tar \
+    && apt-get install -y git wget tar \
     && apt-get upgrade -y
+
+
 
 # Install php extensions & Enable rewrite mod
 RUN apt-get install libldap-dev -y \
